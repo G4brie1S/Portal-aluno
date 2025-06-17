@@ -1,0 +1,362 @@
+:root {
+    --primary-blue: #1B4E98; 
+    --dark-blue: #0056b3; /* Mantido para hover */
+    --light-gray: #F3F3F3;
+    --text-dark: #080808;
+    --text-medium-gray: #939393;
+    --white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+    background-color: #f0f0f0; 
+
+    max-width: 1280px; 
+    max-height: 720px;
+    margin: 0 auto; 
+}
+
+.container {
+    width: 100vw; 
+    height: 100vh; 
+    min-width: 1280px; 
+    min-height: 720px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* CORRIGIDO: de .jpg para .png */
+    background-image: url('../images/background.png'); 
+    background-size: cover;
+    background-position: center;
+    z-index: 0; 
+}
+
+/* --- ELEMENTOS DE OVERLAY E LAYOUT BASE --- */
+
+/* Top Section (Logo Conecta EDU) */
+.top-section-container {
+    position: absolute;
+    left: 10.52%; 
+    right: 18.83%; 
+    top: 11.72%; 
+    bottom: 52.51%; 
+    width: calc(100% - 10.52% - 18.83%); 
+    height: calc(100% - 11.72% - 52.51%); 
+
+    background: var(--white);
+    box-shadow: 0px 4px 24.9px rgba(0, 0, 0, 0.25);
+    border-radius: 117.5px 0px 0px 117.5px;
+    z-index: 5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.conecta-edu-logo {
+    max-width: 95%; 
+    max-height: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- IMAGEM DA MULHER JOVEM --- */
+.mulher-jovem-container {
+    position: absolute;
+    left: 56.68%; 
+    right: 2.12%; 
+    top: -3.2%; 
+    bottom: -3.2%; 
+    width: calc(100% - 56.68% - 2.12%); 
+    height: calc(100% - (-3.2%) - (-3.2%)); 
+
+    z-index: 3; 
+    overflow: hidden; 
+}
+
+.mulher-jovem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* --- BLOCO PRINCIPAL DE LOGIN (Rectangle 129) --- */
+.login-main-block {
+    position: absolute;
+    width: 335px;
+    height: 229px;
+    left: 288px;
+    top: 241px;
+
+    background: var(--light-gray);
+    border-radius: 18px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    box-sizing: border-box;
+    /* Adicionado position relative para os filhos absolutos */
+    position: absolute; /* Garantindo que ele é um contexto de posicionamento */
+}
+
+/* Título "Login" */
+.login-title { 
+    position: absolute;
+    width: 58px;
+    height: 33px;
+    left: 20px; 
+    top: 20px; 
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--text-dark);
+    margin: 0; 
+    z-index: 1; 
+}
+
+/* Input CPF (Input-button cpf, Rectangle 132, CPF) */
+.input-cpf-container {
+    position: absolute;
+    width: 182px;
+    height: 38px;
+    left: 21px; 
+    top: 133px; 
+    z-index: 1;
+}
+
+.input-cpf-container input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px; 
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 100px; 
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-dark);
+    box-sizing: border-box;
+}
+
+.input-label-cpf { 
+    position: absolute;
+    left: 22px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-medium-gray);
+    pointer-events: none; 
+    transition: all 0.2s ease-in-out; 
+}
+.input-cpf-container input:not(:placeholder-shown) + .input-label-cpf,
+.input-cpf-container input:focus + .input-label-cpf {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Input Senha (Input-button senha, Rectangle 131, Senha) */
+.input-senha-container {
+    position: absolute;
+    width: 182px;
+    height: 38px;
+    left: 21px; 
+    top: 186px; 
+    z-index: 1;
+}
+
+.input-senha-container input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px; 
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-dark);
+    box-sizing: border-box;
+}
+
+.input-label-senha { 
+    position: absolute;
+    left: 22px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-medium-gray);
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+.input-senha-container input:not(:placeholder-shown) + .input-label-senha,
+.input-senha-container input:focus + .input-label-senha {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Click-button Entrar (Rectangle 133, Entrar) - AO LADO DE LOGIN */
+.enter-button {
+    position: absolute;
+    width: 104px;
+    height: 90px; 
+    left: 214px; 
+    top: 134px; /* Mantido como top do input para ser "ao lado" deles */
+    
+    background: var(--primary-blue); 
+    border-radius: 15px; 
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+    background-color: var(--dark-blue);
+}
+
+/* Hyperlink Esqueceu a senha? (Rectangle 130 + hyperlink Esqueceu a senha?) */
+.forgot-password-box-container {
+    position: absolute;
+    width: 263px; /* Largura do retângulo */
+    height: 145px; /* Altura do retângulo */
+    left: 21px; 
+    top: 251px; /* Posicionamento relativo ao .login-main-block */
+
+    background: var(--white);
+    border-radius: 18px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinhar o texto na parte inferior do box */
+    padding-bottom: 20px; 
+    box-sizing: border-box;
+}
+
+.forgot-password-link { 
+    width: 117px; /* Largura do texto */
+    height: 18px; /* Altura do texto */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-dark);
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; 
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* --- BRASÃO CABEDELO --- */
+/* Baseado em "Rectangle 218" e "brasao-cabedelo" */
+.brasao-cabedelo-container {
+    position: absolute;
+    width: 210px;
+    height: 102px;
+    left: 61px;
+    top: 341px;
+
+    background: var(--white);
+    border-radius: 14px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Imagem do Brasão */
+.brasao-cabedelo-img {
+    width: 89px;
+    height: 67px;
+    object-fit: contain;
+    display: block;
+
+    /* ADICIONADO: Transição para a imagem */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ADICIONADO: Hover para a imagem */
+.brasao-cabedelo-img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% no hover */
+    cursor: pointer; /* Garante o cursor de mão */
+}
+
+/* LOGO VV */
+.logo-vv-container {
+    position: absolute;
+    height: 44.81px;
+    left: 2.56%; 
+    top: calc(50% - 44.81px/2 + 289.9px); 
+    width: 80px; 
+
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* ADICIONADO: Propriedade de transição para suavizar o efeito */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.logo-vv-img { 
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ADICIONADO: Estilo para o hover */
+.logo-vv-container:hover {
+    transform: scale(1.1); /* Aumenta a logo em 10% no hover */
+    /* Você também pode tentar um efeito de brilho ou sombra: */
+    /* filter: brightness(1.2); */ /* Deixa a imagem 20% mais brilhante */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); */ /* Adiciona uma sombra */
+}
+
+
+/* --- ESTILOS GERAIS PARA INTERATIVIDADE --- */
+.click-button {
+    cursor: pointer;
+}
