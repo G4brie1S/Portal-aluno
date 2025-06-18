@@ -6,6 +6,7 @@
     --text-dark: #080808;
     --text-medium-gray: #939393;
     --white: #FFFFFF;
+    --text-purple: #894795;
 }
 
 /* Reset básico e body com fundo */
@@ -41,7 +42,6 @@ body {
     position: absolute;
     top: 1rem;
     left: -1rem;
-    z-index: 10;
     border-radius: 18px;
     display: flex;
     align-items: center;
@@ -96,11 +96,11 @@ body {
 
 /* Título centralizado */
 .login-title {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--text-dark);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-purple);
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Formulário */
@@ -188,7 +188,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
 }
 
 /* Estilo da imagem: ajusta-se ao container */
@@ -233,3 +232,65 @@ body {
   transform: translateY(-8px);
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 25rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.8rem 0 0.4rem 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-actions button {
+    margin: 0.5rem;
+    padding: 0.6rem 1.15rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: #0056b3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-actions button:hover {
+  background-color: #004494;
+}
+
+.mensagem-erro {
+  font-weight: 100;
+  height: 20px;
+  font-size: 14px;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mensagem-erro.visivel {
+  opacity: 1;
+}
+
+.mensagem-erro.sucesso {
+  color: green;
+}
