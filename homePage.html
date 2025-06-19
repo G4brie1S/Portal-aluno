@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Aluno</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
+      rel="stylesheet"
+    >
+    <style>
+        /* Estes estilos estavam no seu homePage.html, mas se já estão no global.css, pode removê-los daqui */
+        body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #e0f2f7; color: #1B4E98; }
+        h1 { font-size: 2.5rem; text-align: center; }
+        p { font-size: 1.2rem; margin-top: 1rem; }
+        .back-link { margin-top: 30px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
+        .back-link:hover { background-color: #0056b3; }
+        #welcomeMessage { color: white; }
+    </style>
+</head>
+<body>
+    <h1 id="welcomeMessage">Bem-vindo ao Dashboard do Aluno!</h1>
+    <p id="welcomeMessage">Você acessou com sucesso o portal.</p>
+    
+    <a id="logoutButton" href="index.html" class="back-link">Voltar para Login</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const alunoLogadoJSON = localStorage.getItem('alunoLogado');
+            const welcomeMessageElement = document.getElementById('welcomeMessage');
+
+            // 1. VERIFICAÇÃO DE LOGIN: Redireciona se não houver aluno logado
+            if (!alunoLogadoJSON) {
+                window.location.href = 'index.html'; 
+                return; 
+            }
+
+            // 2. Se há um aluno logado, exibe as informações
+            const alunoLogado = JSON.parse(alunoLogadoJSON);
+            if (alunoLogado.nome) {
+                welcomeMessageElement.textContent = `Bem-vindo(a), ${alunoLogado.nome}!`;
+            }
+
+            // NOVO: Adiciona a lógica para o botão de Sair
+            const logoutButton = document.getElementById('logoutButton');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function() {
+                    localStorage.removeItem('alunoLogado'); // Limpa os dados do aluno
+                    window.location.href = 'index.html'; // Redireciona para a página de login
+                });
+            }
+        });
+    </script>
+    <script src="assets/js/data-models.js"></script>
+    <script src="assets/js/aluno-data.js"></script>
+    <script src="assets/js/validate-login.js"></script>
+    <script src="assets/js/forgot-password.js"></script>
+</body>
+</html>
