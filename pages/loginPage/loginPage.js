@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const mensagem = document.getElementById('mensagem-modal');
   const inputCPF = document.getElementById('cpf-recuperacao');
 
-  const cpfValido = '1'; // substituir por validação real no futuro
-
   link.addEventListener('click', function (e) {
     e.preventDefault();
     modal.style.display = 'flex';
@@ -21,19 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   btnEnviar.addEventListener('click', function () {
-    const cpf = inputCPF.value.trim();
+    const cpfDigitado = inputCPF.value.trim(); 
 
-    if (!cpf) {
+    if (!cpfDigitado) {
       mensagem.textContent = 'Por favor, digite seu CPF.';
       mensagem.classList.add('visivel');
       mensagem.classList.remove('sucesso');
-    } else if (cpf !== cpfValido) {
-      mensagem.textContent = 'CPF não encontrado.';
-      mensagem.classList.add('visivel');
-      mensagem.classList.remove('sucesso');
     } else {
-      mensagem.textContent = 'Instruções enviadas para o e-mail cadastrado.';
-      mensagem.classList.add('visivel', 'sucesso');
+      // -- Procura o CPF digitado na lista global 'loginsValidos'
+      const cpfExiste = loginsValidos.some(login => login.cpf === cpfDigitado);
+      if (!cpfExiste) { // -- Se o CPF NÃO for encontrado na lista
+        mensagem.textContent = 'CPF não encontrado.';
+        mensagem.classList.add('visivel');
+        mensagem.classList.remove('sucesso');
+      } else { // -- Se o CPF for encontrado
+        mensagem.textContent = 'Instruções enviadas para o e-mail cadastrado.';
+        mensagem.classList.add('visivel', 'sucesso');
+        // -- Fazer uma chamada para o backend aqui para realmente enviar o e-mail
+        // console.log('Solicitação de recuperação de senha para CPF:', cpfDigitado);
+      }
     }
   });
 });

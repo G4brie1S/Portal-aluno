@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (alunoEncontrado) {
         console.log('Login bem-sucedido para:', alunoEncontrado.nome);
         localStorage.setItem('alunoLogado', JSON.stringify(alunoEncontrado));
-        window.location.href = 'homePage.html';
+        window.location.href = '../../pages/homePage/homePage.html';
       } 
     } else {
       // Credenciais inválidas

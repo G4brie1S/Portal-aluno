@@ -1,9 +1,10 @@
 // -- Classes
 
 class Notificacao {
-    constructor(tipo, mensagem) {
+    constructor(tipo, mensagem, alunoCpfDestino) {
         this.tipo = tipo; // Ex: 'Aviso', 'Lembrete', 'Urgente'
         this.mensagem = mensagem;
+        this.alunoCpfDestino = alunoCpfDestino; // CPF do aluno que deve receber a notificação
     }
 }
 
@@ -58,6 +59,6 @@ class Aluno {
         this.turma = turma; // Objeto Turma
         this.escola = escola; // Objeto Escola
         this.notas = notas; // Array de objetos Nota
-        this.notificacoes = notificacoes; // Array de objetos Notificacao
+        this.notificacoes = []; // Será populado em tempo real
     }
 }

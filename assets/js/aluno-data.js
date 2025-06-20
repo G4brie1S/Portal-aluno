@@ -28,23 +28,18 @@ const notaPortuguesME = new Nota("Português", 7.0);
 const notaCienciasLP = new Nota("Ciências", 7.8);
 const notaGeografiaLP = new Nota("Geografia", 9.2);
 
-// --- 5. Definir Notificações (usadas nos Alunos) ---
-const notificacaoAvaliacaoME = new Notificacao("Lembrete", "Nova avaliação de Ciências na sexta-feira.");
-const notifTarefaLP = new Notificacao("Aviso Urgente", "Tarefa de História para amanhã.");
-
-// --- 6. Definir Objetos de Login (usados nos Alunos e na lista de logins) ---
+// --- 5. Definir Objetos de Login (usados nos Alunos e na lista de logins) ---
 const loginArtur = new Login("1", "1"); // CPF '1' e Senha '1' para Artur
 const loginPedro = new Login("2", "2"); // CPF '2' e Senha '2' para Pedro
 
-// --- 7. Definir os Alunos (que usam Login, Turma, Escola, Notas, Notificações) ---
+// --- 6. Definir os Alunos (que usam Login, Turma, Escola, Notas, Notificações) ---
 const arturFelipe = new Aluno(
     "Artur Felipe",
     loginArtur,
     "7º Ano",
     turma7AnoA,
     escolaMunicipalSaber,
-    [notaMatematicaME, notaPortuguesME],
-    [notificacaoAvaliacaoME]
+    [notaMatematicaME, notaPortuguesME] // Removido notificacoes aqui
 );
 
 const pedroLucas = new Aluno( 
@@ -53,11 +48,31 @@ const pedroLucas = new Aluno(
     "8º Ano",
     turma8AnoB,
     escolaMunicipalSaber,
-    [notaCienciasLP, notaGeografiaLP],
-    [notifTarefaLP]
+    [notaCienciasLP, notaGeografiaLP] // Removido notificacoes aqui
 );
 
+// --- 7. Definir Notificações (usadas nos Alunos) ---
+const todasAsNotificacoes = [
+    // Notificações para Artur Felipe (CPF: "1")
+    new Notificacao("Lembrete", "Nova avaliação de Ciências na sexta-feira.", loginArtur.cpf),
+    new Notificacao("Aviso", "Lembre-se de trazer o material para a aula de artes.", loginArtur.cpf),
+    new Notificacao("Urgente", "Comunicado importante da diretoria sobre o feriado.", loginArtur.cpf),
+    new Notificacao("Lembrete", "Não esqueça a tarefa de matemática.", loginArtur.cpf),
+    new Notificacao("Aviso", "Sua nota de português já está disponível.", loginArtur.cpf),
+    new Notificacao("Evento", "Feira de Ciências da escola será no dia 10/07.", loginArtur.cpf),
+    new Notificacao("Lembrete", "Prova de História na próxima segunda.", loginArtur.cpf),
+    new Notificacao("Aviso", "Boletim do 1º bimestre liberado.", loginArtur.cpf),
+    new Notificacao("Lembrete", "Reunião de pais e mestres no dia 25/06.", loginArtur.cpf),
+
+
+    // Notificações para Pedro Lucas (CPF: "2")
+    new Notificacao("Aviso Urgente", "Tarefa de História para amanhã.", loginPedro.cpf),
+    new Notificacao("Lembrete", "Não esqueça o trabalho em grupo de geografia.", loginPedro.cpf),
+    new Notificacao("Aviso", "A biblioteca terá horário reduzido esta semana.", loginPedro.cpf)
+];
+
 // --- 8. Definir as Listas Globais (que usam os objetos de Login e Aluno) ---
+
 // Use os nomes corretos dos objetos Login definidos acima
 const loginsValidos = [loginArtur, loginPedro];
 // Use os nomes corretos dos objetos Aluno definidos acima
