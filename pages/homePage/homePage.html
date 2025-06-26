@@ -15,8 +15,26 @@
 </head>
 <body>
     <header class="logo-header">
-            <img src="../../assets/images/container-logos.png" alt="Conecta EDU e Brasão Cabedelo">
+            <img src="../../assets/images/container-logos.svg" alt="Conecta EDU e Brasão Cabedelo">
     </header>
+
+     <div id="card_perfil_foto_aluno">
+        <div id="card_perfil_aluno">
+            <span class="aluno_nome">Olá, <span id="card_nome"></span></span>
+            
+            <div class="acoes">
+                <a id="perfilButton" class="cards_btns">
+                <img src="../../assets/images/pencil-icon.svg" alt="E" />
+                Perfil 
+                </a>
+                <a id="logoutButton" class="cards_btns sair">
+                Sair
+                </a>
+            </div>
+        </div>
+        <div class="card_foto"></div>
+     </div>
+
     <div class = "content-wrapper">
         <div class = "content-wrapper-aluno-informacoes">
             <div class = "aluno-nome-foto-wrapper">
@@ -43,11 +61,9 @@
                 CALENDÁRIO ESCOLAR
             </div>
         </div>
-        <div class = "notificacoes-wrapper">
-            <h2>NOTIFICAÇÕES</h2>
-            <div id="notificacoesList">
-            
-            </div>
+       <div class = "notificacoes-wrapper">
+            <h2 class="notificacoes-titulo">NOTIFICAÇÕES</h2> 
+            <div id="notificacoesList" class="notificacoes-lista-scroll"></div>
         </div>
     </div>
 

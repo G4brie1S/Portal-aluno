@@ -10,7 +10,7 @@ body {
     color: #1B4E98; 
 }
 
-h1 {
+/* h1 {
     font-size: 2.5rem; 
     text-align: center; 
 }
@@ -38,7 +38,7 @@ p {
     background-color: #0056b3;
     width: 40rem;
     height: 20rem;
-}
+} */
 
 .content-wrapper{
     background-color: white;
@@ -61,7 +61,7 @@ p {
     .alunoInformacoes{
         padding: 0.5rem 0.5rem;
         width: 10rem;
-        height: 3rem;
+        height: auto;
         border-radius: 0.75rem;
         display: flex;
         justify-content: center;
@@ -175,42 +175,109 @@ p {
 
 /* Terceira Coluna do content-wrapper */
     .notificacoes-wrapper {
-        background-color: #74B72E;
-        border-radius: 18px;
-        padding: 20px;
+    background-color: #74B72E;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    /* flex-grow: 1; */
+    /* min-height: 0; */
+    width: 14rem;
+    height: auto;
+    }
+
+    /* Estilo do TÍTULO "NOTIFICAÇÕES" (h2 dentro do wrapper) */
+    .notificacoes-titulo {
+        color: white; /* Texto branco como no Figma */
+        font-size: 1.2rem; /* 19.2px */
+        font-weight: 700;
+        margin-bottom: 0.625rem; /* 10px */
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* Contêiner da lista de notificações com scroll */
+    .notificacoes-lista-scroll {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-right: 0.3125rem; /* 5px */
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        flex-grow: 1;
-        /* Adicione uma altura máxima para que o scroll seja ativado */
-        /* Exemplo: Ajuste esta altura conforme o design para o contêiner total */
-        height: 100%; /* Permite que o #notificacoesList dentro dele use o restante do espaço */
+        gap: 0.5rem; /* 8px */
+        min-height: 0;
     }
 
-    /* Estilos para a lista de notificações com scroll */
-    #notificacoesList {
-        flex-grow: 1; /* Permite que a lista ocupe o espaço disponível */
-        overflow-y: auto; /* Adiciona scroll vertical se o conteúdo exceder */
-        /* Opcional: Estilize a barra de rolagem para combinar com o design */
-        scrollbar-width: thin; /* Firefox */
-        scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Firefox */
-        padding-right: 5px; /* Para que o texto não fique colado na barra de rolagem */
+    /* Estilos da barra de rolagem (WebKit - Chrome, Edge, Safari) */
+    .notificacoes-lista-scroll::-webkit-scrollbar {
+        width: 0.5rem; /* 8px */
+    }
+    .notificacoes-lista-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .notificacoes-lista-scroll::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 0.625rem; /* 10px */
+        border: 0.125rem solid transparent; /* 2px */
+    }
+    /* Estilos da barra de rolagem (Firefox) */
+    .notificacoes-lista-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
     }
 
-    /* Para navegadores baseados em Webkit (Chrome, Edge, Safari) */
-    #notificacoesList::-webkit-scrollbar {
-        width: 8px; /* Largura da barra de rolagem */
+    /* Estilo de CADA ITEM/BOTÃO de notificação */
+    .notificacao-item {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 0.625rem 0.75rem; /* 10px 12px */
+        border-radius: 0.5rem; /* 8px */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        transition: background-color 0.2s ease;
+        box-sizing: border-box;
+        width: 100%;
     }
 
-    #notificacoesList::-webkit-scrollbar-track {
-        background: transparent; /* Fundo da trilha da barra */
+    .notificacao-item:hover {
+        background-color: rgba(255, 255, 255, 0.35);
     }
 
-    #notificacoesList::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.5); /* Cor da "alça" da barra */
-        border-radius: 10px; /* Arredondamento da alça */
-        border: 2px solid transparent; /* Bordas transparentes */
+    /* Estilo do cabeçalho da notificação (check + tipo) */
+    .notificacao-item .notificacao-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; /* 8px */
+        margin-bottom: 0.25rem; /* 4px */
+        font-weight: bold;
+        font-size: 0.9rem; /* 14.4px */
+    }
+
+    /* Estilo do ícone de check */
+    .notificacao-check-icon {
+        color: white;
+        font-size: 1rem; /* 16px */
+        line-height: 1;
+    }
+
+    /* Estilo do tipo de notificação */
+    .notificacao-tipo {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    /* Estilo da mensagem da notificação (com truncamento) */
+    .notificacao-mensagem {
+        color: white;
+        font-size: 0.8rem; /* 12.8px */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
     }
 /* Fim da Terceira Coluna do content-wrapper */
 #welcomeMessage{ 

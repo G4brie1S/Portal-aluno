@@ -54,6 +54,7 @@ const pedroLucas = new Aluno(
 // --- 7. Definir Notificações (usadas nos Alunos) ---
 const todasAsNotificacoes = [
     // Notificações para Artur Felipe (CPF: "1")
+    new Notificacao("Azul", "TESTE 1", loginArtur.cpf),
     new Notificacao("Lembrete", "Nova avaliação de Ciências na sexta-feira.", loginArtur.cpf),
     new Notificacao("Aviso", "Lembre-se de trazer o material para a aula de artes.", loginArtur.cpf),
     new Notificacao("Urgente", "Comunicado importante da diretoria sobre o feriado.", loginArtur.cpf),

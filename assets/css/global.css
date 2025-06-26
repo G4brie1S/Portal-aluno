@@ -64,3 +64,48 @@ body {
   transform: translateY(-8px);
 }
 
+
+/* Testando */
+
+
+#card_perfil_aluno {
+    position: absolute;
+    top: 2.125rem;
+    right: 1.25rem;
+    background-color: #FFFFFF;
+    border-radius: 1.75rem;
+    padding: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 5rem;
+    width: auto;
+    font-size: 1rem;
+    color: #838282;
+}
+    
+
+/* #card_perfil_aluno .cards_btns {
+    background-color: white;
+    color: #838282 ;
+} */
+
+/* Estilo para a área da foto (container) */
+.card_foto {
+    position: absolute;
+    top: 1rem;
+    right: 7.65rem;
+    background-color: #4991E0;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 100%;
+}
+
+#perfilButton,
+#logoutButton {
+    cursor: pointer;
+}
+
+.acoes{
+    display: flex;
+    gap: 0.4rem;
+}
