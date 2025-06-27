@@ -135,6 +135,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 100vh;
 }
 
 /* Estilo da imagem: ajusta-se ao container */

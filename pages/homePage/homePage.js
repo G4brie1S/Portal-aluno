@@ -87,3 +87,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.querySelector('.btn-simulados').addEventListener('click', () => {
+    window.location.href = '../simulatedExams/simulatedExams.html'; // coloque o caminho real da página
+  });
+  
+  document.querySelector('.btn-biblioteca-digital').addEventListener('click', () => {
+    window.location.href = '../digitalLibrary/digitalLibrary.html';
+  });
+  
+  document.querySelector('.btn-ocorrencias').addEventListener('click', () => {
+    window.location.href = '../incidents/incidents.html';
+  });
+  
+  document.querySelector('.btn-avaliacoes').addEventListener('click', () => {
+    window.location.href = '../grades/grades.html';
+  });
+  
+  document.querySelector('.btn-calendario-escolar').addEventListener('click', () => {
+    window.location.href = '../schoolCalendar/schoolCalendar.html';
+  });
