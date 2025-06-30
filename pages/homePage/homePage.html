@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page do Aluno</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="homePage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
+      rel="stylesheet"
+    >
+</head>
+<body>
+    <header class="logo-header">
+            <img src="../../assets/images/container-logos.svg" alt="Conecta EDU e Brasão Cabedelo">
+    </header>
+
+     <div id="card_perfil_foto_aluno">
+        <div id="card_perfil_aluno">
+            <span class="aluno_nome">Olá, <span id="card_nome"></span></span>
+            
+            <div class="acoes">
+                <a id="perfilButton" class="cards_btns">
+                <img src="../../assets/images/pencil-icon.svg" alt="E" />
+                Perfil 
+                </a>
+                <a id="logoutButton" class="cards_btns sair">
+                Sair
+                </a>
+            </div>
+        </div>
+        <div class="card_foto"></div>
+     </div>
+
+    <div class = "content-wrapper">
+        <div class = "content-wrapper-aluno-informacoes">
+            <div class = "aluno-nome-foto-wrapper">
+                <div class = "alunoFoto"></div>
+                <div class = "alunoInformacoes alunoNome-Informacoes" id = "alunoNome"></div>
+            </div>
+            <div class = "alunoInformacoes alunoEscola-Informacao" id = "alunoEscola"></div>
+            <div class = "alunoInformacoes alunoAno-Informacao" id = "alunoSerie"></div>
+        </div>
+        <div class = "btns-wrapper">
+            <div class = "btn btn-simulados">
+                SIMULADOR
+            </div>
+            <div class = "btn btn-biblioteca-digital">
+                BIBLIOTECA DIGITAL
+            </div>
+            <div class = "btn btn-ocorrencias">
+                OCORRÊNCIAS
+            </div>
+            <div class = "btn btn-avaliacoes">
+                AVALIAÇÕES
+            </div>
+            <div class = "btn btn-calendario-escolar">
+                CALENDÁRIO ESCOLAR
+            </div>
+        </div>
+       <div class = "notificacoes-wrapper">
+            <h2 class="notificacoes-titulo">NOTIFICAÇÕES</h2> 
+            <div id="notificacoesList" class="notificacoes-lista-scroll"></div>
+        </div>
+    </div>
+
+    <h1 id="welcomeMessage"></h1>
+    <p id="welcomeMessage"></p>
+    <!-- <a id="logoutButton" href="../../pages/loginPage/index.html" class="back-link">Voltar para Login</a> -->
+
+    <!-- Logo da Virtual Vision -->
+    <div class="logo-vv">
+            <a href="https://vvision.com.br/" target="_blank"><img src="../../assets/images/logo-vv.png" alt="Virtual Vision"></a>
+    </div>
+
+    <script src="../../assets/js/data-models.js"></script>
+    <script src="../../assets/js/aluno-data.js"></script>
+    <script src="../../assets/js/validate-login.js"></script>
+    <script src="homePage.js"></script>
+</body>
+</html>
