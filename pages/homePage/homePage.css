@@ -92,7 +92,8 @@ p {
         justify-content: center;
         padding: 1rem 1rem;
         border-radius: 0.75rem;
-        gap: 0.5rem;
+        /* Gera Erro no tamanho do wrapper */
+        /* gap: 0.5rem; */
     }
 
     /* Apenas para tentar padronizar o tamanho que irá ficar o tamanho da foto do aluno */

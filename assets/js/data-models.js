@@ -15,6 +15,12 @@ class Nota {
     }
 }
 
+class Materia {
+    constructor(materia, ano) {
+        this.materiaNome = materia;
+        this.materiaAno = ano;
+    }
+}
 class HorarioAula {
     constructor(diaSemana, professor) {
         this.diaSemana = diaSemana;
@@ -52,7 +58,7 @@ class Login {
 }
 
 class Aluno {
-    constructor(nome, login, serie, turma, escola, notas = [], notificacoes = []) {
+    constructor(nome, login, serie, turma, escola, notas = [], notificacoes = [], simulados = []) {
         this.nome = nome;
         this.login = login;
         this.serie = serie;
@@ -60,5 +66,6 @@ class Aluno {
         this.escola = escola; // Objeto Escola
         this.notas = notas; // Array de objetos Nota
         this.notificacoes = []; // Será populado em tempo real
+        this.simulados = [];
     }
 }

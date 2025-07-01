@@ -29,8 +29,8 @@ const notaCienciasLP = new Nota("Ciências", 7.8);
 const notaGeografiaLP = new Nota("Geografia", 9.2);
 
 // --- 5. Definir Objetos de Login (usados nos Alunos e na lista de logins) ---
-const loginArtur = new Login("1", "1"); // CPF '1' e Senha '1' para Artur
-const loginPedro = new Login("2", "2"); // CPF '2' e Senha '2' para Pedro
+const loginArtur = new Login("1", "1"); 
+const loginPedro = new Login("2", "2"); 
 
 // --- 6. Definir os Alunos (que usam Login, Turma, Escola, Notas, Notificações) ---
 const arturFelipe = new Aluno(
@@ -74,7 +74,16 @@ const todasAsNotificacoes = [
 
 // --- 8. Definir as Listas Globais (que usam os objetos de Login e Aluno) ---
 
-// Use os nomes corretos dos objetos Login definidos acima
 const loginsValidos = [loginArtur, loginPedro];
-// Use os nomes corretos dos objetos Aluno definidos acima
+
 const alunosCompletos = [arturFelipe, pedroLucas];
+
+// --- 9. Definir a Lista Global de Matérias
+
+const todasAsMaterias = [
+    new Materia("Matemática", "8º Ano"),
+    new Materia("Português", "6º Ano"),
+    new Materia("Ciências", "6º Ano"),
+    new Materia("Inglês", "6º Ano"),
+    new Materia("Matemática", "6º Ano")
+]

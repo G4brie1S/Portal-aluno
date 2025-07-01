@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(res => res.text())
       .then(html => {
         document.getElementById('alunoHeaderContainer').innerHTML = html;
-  
         // Executa o código que preenche o nome e adiciona o logout
         const alunoLogadoJSON = localStorage.getItem('alunoLogado');
         if (alunoLogadoJSON) {
@@ -25,4 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         }
       });
+    fetch('../../components/logoVv.html')
+    .then(res => {
+      if (!res.ok) throw new Error('Erro ao carregar logoVV.html');
+      return res.text();
+    })
+    .then(html => {
+      document.getElementById('logoVVContainer').innerHTML = html;
+    })
+    .catch(err => {
+      console.error('Erro ao carregar logoVV:', err);
+    });
   });
