@@ -36,4 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(err => {
         console.error('Erro ao carregar logoVV:', err);
       });
+    fetch('../../components/backButton.html')
+      .then(res => res.text())
+      .then(html => {
+        const container = document.getElementById('backButtonContainer');
+        if (container) container.innerHTML = html;
+      })
+      .catch(err => {
+        console.error('Erro ao carregar botão Voltar:', err);
+      });
   });

@@ -25,14 +25,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     fetch('../../components/logoVv.html')
-    .then(res => {
-      if (!res.ok) throw new Error('Erro ao carregar logoVV.html');
-      return res.text();
-    })
-    .then(html => {
-      document.getElementById('logoVVContainer').innerHTML = html;
-    })
-    .catch(err => {
-      console.error('Erro ao carregar logoVV:', err);
-    });
+      .then(res => {
+        if (!res.ok) throw new Error('Erro ao carregar logoVV.html');
+        return res.text();
+      })
+      .then(html => {
+        document.getElementById('logoVVContainer').innerHTML = html;
+      })
+      .catch(err => {
+        console.error('Erro ao carregar logoVV:', err);
+      });
+    fetch('../../components/backButton.html')
+      .then(res => res.text())
+      .then(html => {
+        const container = document.getElementById('backButtonContainer');
+        if (container) container.innerHTML = html;
+      })
+      .catch(err => {
+        console.error('Erro ao carregar botão Voltar:', err);
+      });
   });
