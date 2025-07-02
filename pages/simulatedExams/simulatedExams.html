@@ -20,16 +20,30 @@
     <div class="content-wrapper">
       <!-- Botão de voltar -->
       <div id="backButtonContainer"></div>
-      
-
+      <div class="containers-wrapper">
+        <div class="container-materias-assunto">
+          <div class="inputs-materias-assuntos">
+            <h2 class="containers-titulo">EXAMES</h2>
+            <input id="input-materia" class="input-materias" placeholder="Matéria"></input>
+            <input id="input-assuntos" class="input-assuntos" placeholder="Assunto"></input>
+          </div>
+          <div class="btn-acessar-simulados">ACESSAR</div>
+        </div>
+        <div class="container-historico-simulados">
+          <h2 class="containers-titulo">HISTÓRICO DE SIMULADOS</h2>
+          <div class="selectdropdow-historico">
+            <div id="simulados-historico" class="selectdropdown-simulado-scroll"><img src="../../assets/images/selectdropdown.svg" alt="Ícone do Select Dropdown"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Logo Virtual Vision -->
     <div id="logoVVContainer"></div>
     
-    <script> src="../../assets/js/auth.js"</script>
     <script src="../../assets/js/data-models.js"></script>
     <script src="../../assets/js/aluno-data.js"></script>
+    <script> src="../../assets/js/auth.js"</script>
     <script src="../../assets/js/validate-login.js"></script>
     <script type="module" src="simulatedExams.js"></script>
 </body>

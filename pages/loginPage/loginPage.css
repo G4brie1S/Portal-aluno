@@ -8,7 +8,7 @@
 }
 
 /* Wrapper que contém login + imagem lado a lado */
-.content-wrapper {
+.content-wrapper-loginPage {
     flex: 1;
     display: flex;
     align-items: center;
@@ -148,7 +148,7 @@
 
 /* Responsividade: em telas menores, oculta a imagem e centraliza o card */
 @media (max-width: 768px) {
-    .content-wrapper {
+    .content-wrapper-loginPage {
         flex-direction: column;
     }
     .image-container {

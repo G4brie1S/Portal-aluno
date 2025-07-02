@@ -81,9 +81,25 @@ const alunosCompletos = [arturFelipe, pedroLucas];
 // --- 9. Definir a Lista Global de Matérias
 
 const todasAsMaterias = [
-    new Materia("Matemática", "8º Ano"),
-    new Materia("Português", "6º Ano"),
-    new Materia("Ciências", "6º Ano"),
-    new Materia("Inglês", "6º Ano"),
-    new Materia("Matemática", "6º Ano")
+    new Materia("Matemática", "7º Ano", [
+        new Assunto("Frações", "Operações com frações."),
+        new Assunto("Equações do 1º grau", "Resolução de equações simples.")
+    ]),
+    new Materia("Geografia", "7º Ano", [
+        new Assunto("Clima", "Tipos de clima e fatores climáticos."),
+        new Assunto("Relevo", "Formas do relevo e sua formação.")
+    ]),
+    new Materia("Matemática", "6º Ano", [
+        new Assunto("Expressões Numéricas", "Ordem das operações."),
+        new Assunto("Potenciação", "Potências e suas propriedades.")
+    ])
+];
+
+// -- 10. Definir a Lista de Simulados
+
+const listaDeSimulados = [
+    new Simulados("Matemática", 7, 3, loginArtur.cpf),
+    new Simulados("Matemática", 6, 4, loginPedro.cpf),
+    new Simulados("Geografia", 9, 1, loginPedro.cpf),
+    new Simulados("Matemática", 10, 0, loginArtur.cpf)
 ]

@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }               
     }
 
-    // NOVO: Adiciona a lógica para o botão de Voltar 
+    // NOVO: Adiciona a lógica para o botão de sair 
     const logoutButton = document.getElementById('logoutButton');
     if (logoutButton) {
         logoutButton.addEventListener('click', function() {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.querySelector('.btn-simulados').addEventListener('click', () => {
-    window.location.href = '../simulatedExams/simulatedExams.html'; // coloque o caminho real da página
+    window.location.href = '../simulatedExams/simulatedExams.html'; 
   });
   
   document.querySelector('.btn-biblioteca-digital').addEventListener('click', () => {

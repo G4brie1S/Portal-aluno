@@ -15,12 +15,34 @@ class Nota {
     }
 }
 
+// Teste
+
 class Materia {
-    constructor(materia, ano) {
-        this.materiaNome = materia;
+    constructor(materiaNome, ano, assuntos = []) {
+        this.materiaNome = materiaNome;
         this.materiaAno = ano;
+        this.assuntos = assuntos;
     }
 }
+
+class Assunto {
+    constructor(nome, descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+}
+
+class Simulados {
+    constructor(materiaNome = [], acertos, erros, alunoCpfDestino) {
+        this.materiaNome = materiaNome;
+        this.acertos = Number(acertos);
+        this.erros = Number(erros);
+        this.alunoCpfDestino = alunoCpfDestino;
+    }
+}
+
+// Fim do Teste
+
 class HorarioAula {
     constructor(diaSemana, professor) {
         this.diaSemana = diaSemana;
@@ -66,6 +88,6 @@ class Aluno {
         this.escola = escola; // Objeto Escola
         this.notas = notas; // Array de objetos Nota
         this.notificacoes = []; // Será populado em tempo real
-        this.simulados = [];
+        this.simulados = []; //Será populado em tempo real
     }
 }
