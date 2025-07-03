@@ -6,7 +6,7 @@ body {
     justify-content: center; 
 }
 
-.content-wrapper {
+.costum-simulatedExam {
   padding: 1rem 1.5rem;
   flex-direction: column;
   gap: 0 !important; 
@@ -23,6 +23,7 @@ body {
   flex: 1;
   width: 100%;
   margin-top: 1%;
+  overflow-y: auto;
 }
 
 /* Blocos */
@@ -79,25 +80,6 @@ body {
     width: 100%;
 }
 
-.selectdropdown-simulado-scroll {
-  background-color: white;
-  width: 100%;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 2rem;
-  justify-content: space-between;
-}
-
-.selectdropdow-historico {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  width: 100%;
-}
-
-
 /* Acessar Simulados */
 
 .btn-acessar-simulados {
@@ -111,13 +93,83 @@ body {
     align-content: center;
     flex-wrap: wrap;
     font-size: 0.7rem;
+    border-style: none;
+    cursor: pointer;
 }
 
-.simulado-item {
+.selectdropdown-simulado-scroll {
+  width: 100%;
+  height: auto;
+  overflow-y: auto;   
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  align-items: center;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.simulado-box {
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  border-style: none;
+  color: #767676;
+  transition: background-color 0.2s ease;
+}
+
+.simulado-box:hover {
+  background-color: #f9f9f9;
+}
+
+.simulado-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simulado-detalhes {
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.simulado-box.ativo .simulado-detalhes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.simulado-acertos {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.simulado-erros {
+  color: #c62828;
+  font-weight: 500;
+}
+
+.simulado-titulo img {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.simulado-box.ativo .simulado-titulo img {
+  transform: rotate(180deg); 
+}
+
+
+.btn-acessar-simulados:hover {
+    background-color: #2e5d24;
+}
+
+/* .simulado-item {
   background-color: white;
   border: 1px solid #ccc;
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin-bottom: 0.4rem;
   font-size: 0.75rem;
-}
+} */

@@ -1,10 +1,18 @@
-import { verificarLoginAluno } from '../../assets/js/auth.js';
+import { verificarLoginAluno } from '../../../assets/js/auth.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const aluno = verificarLoginAluno();
   if (!aluno) return;
 
-  console.log('Aluno logado:', aluno.nome);
+  // console.log('Aluno logado:', aluno.nome);
+  // console.log('CPF:',aluno.login.cpf);
+  // console.log('Senha:',aluno.login.senha);
+  // console.log('Serie:',aluno.serie);
+  // console.log('Turma:',aluno.turma);
+  // console.log('Escola:', aluno.escola.nome);
+  console.log('Notas:',aluno.notas);
+  // console.log('Simulados:',aluno.simulados)
+  
 });
 
 document.addEventListener('DOMContentLoaded', function () {

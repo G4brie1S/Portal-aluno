@@ -37,7 +37,6 @@ class Simulados {
         this.materiaNome = materiaNome;
         this.acertos = Number(acertos);
         this.erros = Number(erros);
-        this.alunoCpfDestino = alunoCpfDestino;
     }
 }
 
@@ -80,14 +79,13 @@ class Login {
 }
 
 class Aluno {
-    constructor(nome, login, serie, turma, escola, notas = [], notificacoes = [], simulados = []) {
+    constructor(nome, login, serie, turma, escola, notas = [], simulados = []) {
         this.nome = nome;
         this.login = login;
         this.serie = serie;
         this.turma = turma; // Objeto Turma
         this.escola = escola; // Objeto Escola
         this.notas = notas; // Array de objetos Nota
-        this.notificacoes = []; // Será populado em tempo real
-        this.simulados = []; //Será populado em tempo real
+        this.simulados = simulados; //Será populado em tempo real
     }
 }
