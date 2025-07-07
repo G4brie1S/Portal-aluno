@@ -8,20 +8,36 @@ class Notificacao {
     }
 }
 
-class Nota {
-    constructor(materia, valor) {
-        this.materia = materia;
-        this.valor = valor;
-    }
-}
-
 // Teste
 
+const TIPOS_DE_NOTA = [
+  "VA1", "VA2", "R1", "M1",
+  "VA3", "VA4", "R2", "M2",
+  "VA5", "VA6", "R3",
+  "VA7", "VA8", "R4", "M4",
+  "MG"
+];
+
+class Nota {
+  constructor(materia, tipo, valor) {
+    if (!TIPOS_DE_NOTA.includes(tipo)) {
+      throw new Error(`Tipo de nota inválido: ${tipo}`);
+    }
+
+    this.materia = materia;
+    this.tipo = tipo;
+    this.valor = Number(valor);
+  }
+}
+
+// Fim do Teste
+
 class Materia {
-    constructor(materiaNome, ano, assuntos = []) {
+    constructor(materiaNome, ano, assuntos = [], professor) {
         this.materiaNome = materiaNome;
         this.materiaAno = ano;
         this.assuntos = assuntos;
+        this.professor = professor;
     }
 }
 
@@ -40,8 +56,6 @@ class Simulados {
     }
 }
 
-// Fim do Teste
-
 class HorarioAula {
     constructor(diaSemana, professor) {
         this.diaSemana = diaSemana;
@@ -59,15 +73,15 @@ class Professor {
 class Turma {
     constructor(nome, horarioAulas, professores = []) {
         this.nome = nome;
-        this.horarioAulas = horarioAulas; // Array de objetos HorarioAula
-        this.professores = professores; // Array de objetos Professor
+        this.horarioAulas = horarioAulas; 
+        this.professores = professores;
     }
 }
 
 class Escola {
     constructor(nome, calendario = []) {
         this.nome = nome;
-        this.calendario = calendario; // Array de eventos
+        this.calendario = calendario;
     }
 }
 

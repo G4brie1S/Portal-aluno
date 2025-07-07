@@ -9,3 +9,18 @@ body {
     background-color: #e0f2f7; 
     color: #1B4E98; 
 }
+
+.costum-grades {
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+  gap: 0 !important; 
+  box-sizing: border-box;
+  position: relative;
+}
+
+.grades-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

@@ -23,10 +23,11 @@ const turma7AnoA = new Turma("7º Ano A", [aulaMatematicaME, aulaPortuguesME], [
 const turma8AnoB = new Turma("8º Ano B", [aulaCienciasLP, aulaGeografiaLP], [profCienciasLP, profGeografiaLP]);
 
 // --- 4. Definir Notas (usadas nos Alunos) ---
-const notaMatematicaME = new Nota("Matemática", 8.5);
-const notaPortuguesME = new Nota("Português", 7.0);
-const notaCienciasLP = new Nota("Ciências", 7.8);
-const notaGeografiaLP = new Nota("Geografia", 9.2);
+
+// const notaMatematicaME = new Nota("Matemática", 8.5);
+// const notaPortuguesME = new Nota("Português", 7.0);
+// const notaCienciasLP = new Nota("Ciências", 7.8);
+// const notaGeografiaLP = new Nota("Geografia", 9.2);
 
 
 // --- 5. Definir Objetos de Login (usados nos Alunos e na lista de logins) ---
@@ -40,7 +41,10 @@ const arturFelipe = new Aluno(
     "7º Ano",
     turma7AnoA,
     escolaMunicipalSaber,
-    [notaMatematicaME, notaPortuguesME],
+    [new Nota("Matemática", "VA1", 8),
+    new Nota("Matemática", "VA2", 6),
+    new Nota("Português", "VA1", 9),
+    new Nota("Português", "VA2", 8),],
     []
 );
 
