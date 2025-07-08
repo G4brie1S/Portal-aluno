@@ -1,7 +1,14 @@
 // -- Classes
 
+const TIPOS_DE_NOTIFICACAO =[
+    "Aviso", "Lembrete", "Urgente", "Evento"
+];
+
 class Notificacao {
     constructor(tipo, mensagem, alunoCpfDestino) {
+        if (!TIPOS_DE_NOTIFICACAO.includes(tipo)) {
+            console.log(`Tipo inexistente: ${tipo}`)
+        }
         this.tipo = tipo; // Ex: 'Aviso', 'Lembrete', 'Urgente'
         this.mensagem = mensagem;
         this.alunoCpfDestino = alunoCpfDestino; // CPF do aluno que deve receber a notificação
@@ -21,7 +28,7 @@ const TIPOS_DE_NOTA = [
 class Nota {
   constructor(materia, tipo, valor) {
     if (!TIPOS_DE_NOTA.includes(tipo)) {
-      throw new Error(`Tipo de nota inválido: ${tipo}`);
+      console.log(`Tipo inexestente: ${tipo}`)
     }
 
     this.materia = materia;

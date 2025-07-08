@@ -10,6 +10,12 @@ body {
     color: #1B4E98; 
 }
 
+.container-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .costum-grades {
   padding: 1rem 1.5rem;
   flex-direction: column;
@@ -22,5 +28,76 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
+
+
+
+/* TESTE */
+
+.accordion-grades-scroll {
+  width: 100%;
+  height: auto;
+  overflow-y: auto;   
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  align-items: center;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.grades-box {
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  background-color: #2e7d32;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border-style: none;
+  width: 100%;
+}
+
+#all-grades {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.grades-box:hover {
+  background-color: #439247;
+}
+
+.grades-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.grades-detalhes {
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.grades-box.ativo .grades-detalhes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grades-titulo img {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+  fill: white;
+}
+
+.grades-box.ativo .grades-titulo img {
+  transform: rotate(180deg); 
+}
+
+/* TESTE */
 

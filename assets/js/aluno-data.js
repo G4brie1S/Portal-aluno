@@ -41,10 +41,11 @@ const arturFelipe = new Aluno(
     "7º Ano",
     turma7AnoA,
     escolaMunicipalSaber,
-    [new Nota("Matemática", "VA1", 8),
+    [new Nota("Matemática", "VA1", 5),
     new Nota("Matemática", "VA2", 6),
     new Nota("Português", "VA1", 9),
-    new Nota("Português", "VA2", 8),],
+    new Nota("Português", "VA2", 8),
+    new Nota("Português", "VA3", 9)],
     []
 );
 
@@ -54,14 +55,14 @@ const pedroLucas = new Aluno(
     "8º Ano",
     turma8AnoB,
     escolaMunicipalSaber,
-    [notaCienciasLP, notaGeografiaLP],
+    [],
     []
 );
 
 // --- 7. Definir Notificações (usadas nos Alunos) ---
 const todasAsNotificacoes = [
     // Notificações para Artur Felipe (CPF: "1")
-    new Notificacao("Azul", "TESTE 1", loginArtur.cpf),
+    // new Notificacao("Azul", "TESTE 1", loginArtur.cpf),
     new Notificacao("Lembrete", "Nova avaliação de Ciências na sexta-feira.", loginArtur.cpf),
     new Notificacao("Aviso", "Lembre-se de trazer o material para a aula de artes.", loginArtur.cpf),
     new Notificacao("Urgente", "Comunicado importante da diretoria sobre o feriado.", loginArtur.cpf),
@@ -74,7 +75,7 @@ const todasAsNotificacoes = [
 
 
     // Notificações para Pedro Lucas (CPF: "2")
-    new Notificacao("Aviso Urgente", "Tarefa de História para amanhã.", loginPedro.cpf),
+    new Notificacao("Urgente", "Tarefa de História para amanhã.", loginPedro.cpf),
     new Notificacao("Lembrete", "Não esqueça o trabalho em grupo de geografia.", loginPedro.cpf),
     new Notificacao("Aviso", "A biblioteca terá horário reduzido esta semana.", loginPedro.cpf)
 ];
