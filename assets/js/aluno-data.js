@@ -43,9 +43,14 @@ const arturFelipe = new Aluno(
     escolaMunicipalSaber,
     [new Nota("Matemática", "VA1", 5),
     new Nota("Matemática", "VA2", 6),
+    new Nota("Matemática", "R1", 4),
     new Nota("Português", "VA1", 9),
     new Nota("Português", "VA2", 8),
-    new Nota("Português", "VA3", 9)],
+    new Nota("Português", "VA3", 9),
+    new Nota("Geografia", "VA1", 9),
+    new Nota("História", "VA1", 9),
+    new Nota("Biologia", "VA1", 9),
+    new Nota("Física", "VA1", 9)],
     []
 );
 
@@ -55,7 +60,12 @@ const pedroLucas = new Aluno(
     "8º Ano",
     turma8AnoB,
     escolaMunicipalSaber,
-    [],
+    [new Nota("Matemática", "VA1", 5),
+    new Nota("Matemática", "VA2", 6),
+    new Nota("Matemática", "R1", 4),
+    new Nota("Português", "VA1", 9),
+    new Nota("Português", "VA2", 8),
+    new Nota("História", "VA3", 9),],
     []
 );
 

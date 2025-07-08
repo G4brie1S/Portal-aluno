@@ -29,6 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100%;
+    overflow-y: auto;
 }
 
 
@@ -99,5 +100,25 @@ body {
   transform: rotate(180deg); 
 }
 
-/* TESTE */
+.grades-detalhes {
+  display: none;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
+.nota-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1.2rem;
+}
+
+.nota-tipo {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.nota-valor {
+  font-size: 1rem;
+}
