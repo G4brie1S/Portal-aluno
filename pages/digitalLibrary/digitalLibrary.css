@@ -9,3 +9,92 @@ body {
     background-color: #e0f2f7; 
     color: #1B4E98; 
 }
+
+.costum-digital-library {
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+  gap: 0 !important; 
+  box-sizing: border-box;
+  position: relative;
+}
+
+.buscadorListaLivrosContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    overflow-y: auto;
+}
+
+.buscadorContainer {
+    width: 20rem;
+    background-color: #EEEEEE;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+}
+
+.pesquisarButton {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.pesquisarButton:hover {
+  background-color: #439247;
+}
+
+.input {
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 45%;
+    height: 15%;
+    padding: 0.2rem;
+    margin-top: 1rem;
+}
+
+.tituloBuscadorContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.listaLivrosContainer {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+}
+
+/* TESTE */
+
+.livro-item {
+  width: 90%;
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* FIM DO TESTE */

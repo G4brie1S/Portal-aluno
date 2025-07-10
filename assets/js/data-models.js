@@ -17,6 +17,18 @@ class Notificacao {
 
 // Teste
 
+class Livro {
+  constructor(titulo, ano, autor, editora, arquivoURL) {
+    this.titulo = titulo;
+    this.ano = ano;
+    this.autor = autor;
+    this.editora = editora;
+    this.arquivoURL = arquivoURL;
+  }
+}
+
+// Fim do teste
+
 const TIPOS_DE_NOTA = [
   "VA1", "VA2", "R1", "M1",
   "VA3", "VA4", "R2", "M2",
@@ -36,8 +48,6 @@ class Nota {
     this.valor = Number(valor);
   }
 }
-
-// Fim do Teste
 
 class Materia {
     constructor(materiaNome, ano, assuntos = [], professor) {

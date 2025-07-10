@@ -1,3 +1,11 @@
+// --- Definição de Livros ---
+
+const livros = [
+        new Livro("Dom Casmurro", 1899, "Machado de Assis", "-", "../assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
+        new Livro("Memórias póstumas de Brás Cubas", 1994, "Machado de Assis", "BibVirt", "../assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
+        new Livro("A divina comédia", 2003, "Dante Alighieri", "eBookBrasil", "../assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
+      ];
+
 // --- Definição da Escola Comum ---
 const calendarioEscolaComum = [
     { data: "2025-07-15", descricao: "Início das Férias de Inverno" },
@@ -96,20 +104,4 @@ const loginsValidos = [loginArtur, loginPedro];
 
 const alunosCompletos = [arturFelipe, pedroLucas];
 
-// --- 9. Definir a Lista Global de Matérias
-
-// const todasAsMaterias = [
-//     new Materia("Matemática", "7º Ano", [
-//         new Assunto("Frações", "Operações com frações."),
-//         new Assunto("Equações do 1º grau", "Resolução de equações simples.")
-//     ]),
-//     new Materia("Geografia", "7º Ano", [
-//         new Assunto("Clima", "Tipos de clima e fatores climáticos."),
-//         new Assunto("Relevo", "Formas do relevo e sua formação.")
-//     ]),
-//     new Materia("Matemática", "6º Ano", [
-//         new Assunto("Expressões Numéricas", "Ordem das operações."),
-//         new Assunto("Potenciação", "Potências e suas propriedades.")
-//     ])
-// ];
 
