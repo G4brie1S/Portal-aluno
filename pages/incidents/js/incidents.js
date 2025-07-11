@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!aluno) return;
 
   console.log('Aluno logado:', aluno.nome);
+  console.log(aluno.ocorrencias);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

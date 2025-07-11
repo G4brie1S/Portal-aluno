@@ -110,8 +110,16 @@ class Login {
     }
 }
 
+class Ocorrencia {
+    constructor(tipo, descricao, data) {
+        this.tipo = tipo;
+        this.descricao = descricao;
+        this.data = data;
+    }
+}
+
 class Aluno {
-    constructor(nome, login, serie, turma, escola, notas = [], simulados = []) {
+    constructor(nome, login, serie, turma, escola, notas = [], simulados = [], ocorrencias = []) {
         this.nome = nome;
         this.login = login;
         this.serie = serie;
@@ -119,5 +127,6 @@ class Aluno {
         this.escola = escola; // Objeto Escola
         this.notas = notas; // Array de objetos Nota
         this.simulados = simulados; //Será populado em tempo real
+        this.ocorrencias = ocorrencias; // Array de objetos Ocorrencia
     }
 }

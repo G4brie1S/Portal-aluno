@@ -17,11 +17,14 @@
     <!-- Header do Aluno -->
     <div id="alunoHeaderContainer"></div>
 
-    <div class="content-wrapper">
+    <div class="content-wrapper costum-incidents">
       <!-- Botão de voltar -->
       <div id="backButtonContainer"></div>
-      
-
+      <!-- Acordeões de matérias com notas -->
+      <h2 class="container-titulo">Ocorrências</h2>
+      <div class="incidents-container">
+        <div id="all-incidents" class="incidents-accordion"></div>
+      </div> 
     </div>
 
     <!-- Logo Virtual Vision -->
@@ -32,5 +35,6 @@
     <script src="../../assets/js/aluno-data.js"></script>
     <script src="../../assets/js/validate-login.js"></script>
     <script type="module" src="js/incidents.js"></script>
+    <script src="js/incidentsTable.js" defer></script>
 </body>
 </html>
