@@ -18,12 +18,13 @@ class Notificacao {
 // Teste
 
 class Livro {
-  constructor(titulo, ano, autor, editora, arquivoURL) {
+  constructor(titulo, ano, autor, editora, arquivoURL, imagem) {
     this.titulo = titulo;
     this.ano = ano;
     this.autor = autor;
     this.editora = editora;
     this.arquivoURL = arquivoURL;
+    this.imagem = imagem;
   }
 }
 

@@ -1,4 +1,4 @@
-import { verificarLoginAluno } from '../../assets/js/auth.js';
+import { verificarLoginAluno } from '../../../assets/js/auth.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const aluno = verificarLoginAluno();

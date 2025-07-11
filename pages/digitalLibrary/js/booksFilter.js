@@ -9,11 +9,10 @@
 // }
 
 // const livros = [
-//   new Livro("Dom Casmurro", 1899, "Machado de Assis", "-", "assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
-//   new Livro("Memórias póstumas de Brás Cubas", 1994, "Machado de Assis", "BibVirt", "assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
-//   new Livro("A divina comédia", 2003, "Dante Alighieri", "eBookBrasil", "assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
+//   new Livro("Dom Casmurro", 1899, "Machado de Assis", "-", "assets/books/dom_casmurro.pdf"),
+//   new Livro("Memórias póstumas de Brás Cubas", 1994, "Machado de Assis", "BibVirt", "assets/books/memorias_postumas_de_bras_cubas.pdf"),
+//   new Livro("A divina comédia", 2003, "Dante Alighieri", "eBookBrasil", "assets/books/a_divina_comedia.pdf"),
 // ];
-
 
 function renderizarLivrosNaTela(listaFiltrada) {
     const container = document.querySelector('.listaLivrosContainer');
@@ -28,13 +27,23 @@ function renderizarLivrosNaTela(listaFiltrada) {
     listaFiltrada.forEach(livro => {
     const livroDiv = document.createElement('div');
     livroDiv.classList.add('livro-item');
+
     livroDiv.innerHTML = `
-        <h4>${livro.titulo}</h4>
-        <p><strong>Autor:</strong> ${livro.autor}</p>
-        <a href="${livro.arquivoURL}" download class="btn-download">Baixar</a>
+        <div class="livro-conteudo">
+        <div class="livro-texto">
+            <h4>${livro.titulo}</h4>
+            <p><strong>Autor:</strong> ${livro.autor}</p>
+            <a href="${livro.arquivoURL}" download class="btn-download">Baixar</a>
+        </div>
+        <div class="livro-imagem-wrapper">
+            <img src="${livro.imagem}" alt="${livro.titulo}" class="livro-imagem" />
+        </div>
+        </div>
     `;
+
     container.appendChild(livroDiv);
     });
+
 }
 
 function filtrarLivros() {

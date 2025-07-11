@@ -1,10 +1,10 @@
 // --- Definição de Livros ---
 
 const livros = [
-        new Livro("Dom Casmurro", 1899, "Machado de Assis", "-", "../assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
-        new Livro("Memórias póstumas de Brás Cubas", 1994, "Machado de Assis", "BibVirt", "../assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
-        new Livro("A divina comédia", 2003, "Dante Alighieri", "eBookBrasil", "../assets/books/MEMÓRIAS_PÓSTUMAS_DE_BRÁS_CUBAS.pdf"),
-      ];
+    new Livro("Dom Casmurro", 1899, "Machado de Assis", "-", "../../assets/books/dom_casmurro.pdf", "../../assets/images/dom_casmurro.jpg"),
+    new Livro("Memórias póstumas de Brás Cubas", 1994, "Machado de Assis", "BibVirt", "../../assets/books/memorias_postumas_de_bras_cubas.pdf", "../../assets/images/memorias_postumas_de_bras_cubas.jpg"),
+    new Livro("A divina comédia", 2003, "Dante Alighieri", "eBookBrasil", "../../assets/books/a_divina_comedia.pdf", "../../assets/images/a_divina_comedia.jpg"),
+];
 
 // --- Definição da Escola Comum ---
 const calendarioEscolaComum = [

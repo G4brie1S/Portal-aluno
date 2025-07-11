@@ -53,10 +53,10 @@ body {
     height: 2rem;
     border-radius: 0.5rem;
     border: none;
-    width: 45%;
-    height: 15%;
+    width: 95%;
+    height: 10%;
     padding: 0.2rem;
-    margin-top: 1rem;
+    font-size: 10px;
 }
 
 .tituloBuscadorContainer {
@@ -90,26 +90,76 @@ body {
 .listaLivrosContainer::-webkit-scrollbar-track {
   background-color: transparent; 
 }
+/* Calma Calabreso */
+/* .livro-item {
+  width: 90%;
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 10px;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 8px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 10px;
+} */
+
+ .livro-imagem {
+  width: 3rem;
+} 
+
+.btn-download:hover {
+  background-color: #439247;
+}
 
 .livro-item {
   width: 90%;
   background-color: #ffffff;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
+  font-size: 10px;
+}
+
+.livro-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.livro-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .btn-download {
   display: inline-block;
-  margin-top: 10px;
-  padding: 6px 12px;
+  margin-top: 5px;
+  padding: 3px 8px;
   background-color: #2e7d32;
   color: white;
   text-decoration: none;
   border-radius: 4px;
+  font-size: 10px;
+  max-width: 3rem;
 }
 
-.btn-download:hover {
-  background-color: #439247;
+.livro-imagem-wrapper {
+  max-width: 120px;
+}
+
+.livro-imagem {
+  height: auto;
+  border-radius: 6px;
 }
