@@ -61,7 +61,8 @@ const arturFelipe = new Aluno(
     new Nota("Física", "VA1", 9)],
     [],
     [new Ocorrencia("Falta de material", "Esqueceu o caderno de matemática.", "2025-05-01"),
-     new Ocorrencia("Atraso", "Chegou atrasado na aula de português.", "2025-05-02")]
+     new Ocorrencia("Atraso", "Chegou atrasado na aula de português.", "2025-05-02"),
+     new Ocorrencia("Comportamento", "Faltou com respeito ao professor de geografia.", "2025-05-03")]
 );
 
 const pedroLucas = new Aluno( 

@@ -77,6 +77,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
+  font-size: 0.7rem;
 }
 
 .grades-detalhes {
@@ -87,6 +88,7 @@ body {
 .grades-box.ativo .grades-detalhes {
   display: flex;
   justify-content: space-around;
+  font-size: 0.7rem;
 }
 
 .grades-titulo img {
@@ -120,5 +122,5 @@ body {
 }
 
 .nota-valor {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }

@@ -64,13 +64,14 @@ body {
 .input-assuntos {
     background-color: white;
     width: 100%;
-    height: 2.5rem;
+    height: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     border-radius: 0.75rem;
     border: none;
+    font-size: 0.7rem;
 }
 
 .inputs-materias-assuntos {
@@ -86,7 +87,7 @@ body {
     background-color: #428633;
     color: white;
     width: 100%;
-    height: 2.5rem;
+    height: 2rem;
     display: flex;
     justify-content: center;
     border-radius: 0.75rem;
