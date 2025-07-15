@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,61 +9,59 @@
     <link rel="stylesheet" href="homePage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
-      rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="logo-header">
-            <img src="../../assets/images/container-logos.svg" alt="Conecta EDU e Brasão Cabedelo">
+        <img src="../../assets/images/container-logos.svg" alt="Conecta EDU e Brasão Cabedelo">
     </header>
 
     <div id="card_perfil_foto_aluno">
         <div id="card_perfil_aluno">
             <span class="aluno_nome">Olá, <span id="card_nome"></span></span>
-            
+
             <div class="acoes">
                 <a id="perfilButton" class="cards_btns">
-                <img src="../../assets/images/pencil-icon.svg" alt="E" />
-                Perfil 
+                    <img src="../../assets/images/pencil-icon.svg" alt="E" />
+                    Perfil
                 </a>
                 <a id="logoutButton" class="cards_btns sair">
-                Sair
+                    Sair
                 </a>
             </div>
         </div>
         <div class="card_foto"></div>
-     </div>
+    </div>
 
-    <div class = "content-wrapper">
-        <div class = "content-wrapper-aluno-informacoes">
-            <div class = "aluno-nome-foto-wrapper">
-                <div class = "alunoFoto"></div>
-                <div class = "alunoInformacoes alunoNome-Informacoes" id = "alunoNome"></div>
+    <div class="content-wrapper">
+        <div class="content-wrapper-aluno-informacoes">
+            <div class="aluno-nome-foto-wrapper">
+                <div class="alunoFoto"></div>
+                <div class="alunoInformacoes alunoNome-Informacoes" id="alunoNome"></div>
             </div>
-            <div class = "alunoInformacoes alunoEscola-Informacao" id = "alunoEscola"></div>
-            <div class = "alunoInformacoes alunoAno-Informacao" id = "alunoSerie"></div>
+            <div class="alunoInformacoes alunoEscola-Informacao" id="alunoEscola"></div>
+            <div class="alunoInformacoes alunoAno-Informacao" id="alunoSerie"></div>
         </div>
-        <div class = "btns-wrapper">
-            <div class = "btn btn-simulados">
+        <div class="btns-wrapper">
+            <div class="btn btn-simulados">
                 SIMULADOS
             </div>
-            <div class = "btn btn-biblioteca-digital">
+            <div class="btn btn-biblioteca-digital">
                 BIBLIOTECA DIGITAL
             </div>
-            <div class = "btn btn-ocorrencias">
+            <div class="btn btn-ocorrencias">
                 OCORRÊNCIAS
             </div>
-            <div class = "btn btn-avaliacoes">
+            <div class="btn btn-avaliacoes">
                 AVALIAÇÕES
             </div>
-            <div class = "btn btn-calendario-escolar">
+            <div class="btn btn-calendario-escolar">
                 CALENDÁRIO ESCOLAR
             </div>
         </div>
-       <div class = "notificacoes-wrapper">
-            <h2 class="notificacoes-titulo">NOTIFICAÇÕES</h2> 
+        <div class="notificacoes-wrapper">
+            <h2 class="notificacoes-titulo">NOTIFICAÇÕES</h2>
             <div id="notificacoesList" class="notificacoes-lista-scroll"></div>
         </div>
     </div>
@@ -73,12 +72,36 @@
 
     <!-- Logo da Virtual Vision -->
     <div class="logo-vv">
-            <a href="https://vvision.com.br/" target="_blank"><img src="../../assets/images/logo-vv.png" alt="Virtual Vision"></a>
+        <a href="https://vvision.com.br/" target="_blank"><img src="../../assets/images/logo-vv.png"
+                alt="Virtual Vision"></a>
     </div>
 
     <script src="../../assets/js/data-models.js"></script>
     <script src="../../assets/js/aluno-data.js"></script>
     <script src="../../assets/js/validate-login.js"></script>
+    <script src="../../assets/js/interfaceGlobal.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        await carregarComponente('../../components/alunoHeader.html', 'alunoHeaderContainer');
+        await carregarComponente('../../components/logoVv.html', 'logoVVContainer');
+        await carregarComponente('../../components/backButton.html', 'backButtonContainer');
+
+        // Só depois de carregar os 3 componentes, executa o script
+        configurarCabecalhoAluno();
+      });
+    </script>
     <script src="homePage.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const perfilButton = document.querySelector('#perfilButton');
+            if (perfilButton) {
+                perfilButton.addEventListener('click', () => {
+                    window.location.href = '../perfil/perfil.html';
+                    console.log('Perfil button clicked');
+                });
+            }
+        });
+    </script> -->
 </body>
+
 </html>

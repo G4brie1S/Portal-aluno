@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page do Aluno</title>
+    <title></title>
     <link rel="stylesheet" href="../../assets/css/global.css">
     <link rel="stylesheet" href="simulatedExams.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,9 +41,20 @@
 
     <script src="../../assets/js/data-models.js"></script>
     <script src="../../assets/js/aluno-data.js"></script>
-    <script> src="../../assets/js/auth.js"</script>
+    <script src="../../assets/js/auth.js"></script>
     <script src="../../assets/js/validate-login.js"></script>
     <script type="module" src="js/simulatedExams.js"></script>
+    <script src="../../assets/js/interfaceGlobal.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        await carregarComponente('../../components/alunoHeader.html', 'alunoHeaderContainer');
+        await carregarComponente('../../components/logoVv.html', 'logoVVContainer');
+        await carregarComponente('../../components/backButton.html', 'backButtonContainer');
+
+        // Só depois de carregar os 3 componentes, executa o script
+        configurarCabecalhoAluno();
+      });
+    </script>
     <script src="js/examsHistory.js" defer></script>
 </body>
 </html>

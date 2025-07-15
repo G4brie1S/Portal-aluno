@@ -5,36 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="../../assets/css/global.css">
-    <link rel="stylesheet" href="digitalLibrary.css">
+    <link rel="stylesheet" href="perfil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
       rel="stylesheet"
     >
-</head>
+
 <body>
     <!-- Header do Aluno -->
     <div id="alunoHeaderContainer"></div>
 
-    <div class="content-wrapper costum-digital-library">
+    <div class="content-wrapper costum-perfil">
       <!-- Botão de voltar -->
       <div id="backButtonContainer"></div>
       
-      <!-- Buscador e Lista de Livros -->
-       <div class="buscadorListaLivrosContainer">
-        <div class="buscadorContainer">
-          <header class="tituloBuscadorContainer">Filtro de Pesquisa</header>
-          <input type="text" class="input tituloInput" placeholder="Título">
-          <input type="text" class="input editoraInput" placeholder="Editora">
-          <input type="text" class="input autorInput" placeholder="Autor">
-          <input type="text" class="input anoInput" placeholder="Ano">
-          <button class="input pesquisarButton">Pesquisar</button>
-        </div>
-        <div class="listaLivrosContainer">
-          <header>Arquivos da Biblioteca</header>
-        </div>
-       </div>
     </div>
 
     <!-- Logo Virtual Vision -->
@@ -44,6 +30,7 @@
     <script src="../../assets/js/data-models.js"></script>
     <script src="../../assets/js/aluno-data.js"></script>
     <script src="../../assets/js/validate-login.js"></script>
+    <script src="../../assets/js/interfaceGlobal.js"></script>
     <script src="../../assets/js/interfaceGlobal.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', async () => {
@@ -55,8 +42,7 @@
         configurarCabecalhoAluno();
       });
     </script>
-    <script type="module" src="js/digitalLibrary.js"></script>
-    <script src="js/booksFilter.js" defer></script>
-    
+    <script type="module" src="js/perfil.js"></script>
+    <script src="js/perfilFuctions.js" defer></script>
 </body>
 </html>
